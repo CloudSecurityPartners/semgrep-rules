@@ -1,0 +1,12 @@
+rules:
+  - id: terraform-no-local-exec
+    patterns:
+      - pattern-inside: provisioner "local-exec"
+    languages:
+      - generic
+    paths:
+      include:
+        - "*.tf"
+    message: |
+      Provisioners are not allowed.
+    severity: ERROR

@@ -1,0 +1,7 @@
+rules:
+  - id: no-external-data
+    pattern: data "external" $ANYTHING {...}
+    message: Semgrep found a match
+    languages:
+      - hcl
+    severity: ERROR

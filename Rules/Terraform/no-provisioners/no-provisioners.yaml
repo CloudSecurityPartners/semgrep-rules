@@ -1,0 +1,12 @@
+rules:
+  - id: no-provisioners
+    patterns:
+      - pattern-inside: provisioner "..."
+    languages:
+      - generic
+    paths:
+      include:
+        - "*.tf"
+    message: |
+      Provisioners are not allowed.
+    severity: ERROR

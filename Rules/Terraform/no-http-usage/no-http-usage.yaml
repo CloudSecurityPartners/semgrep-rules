@@ -1,0 +1,7 @@
+rules:
+  - id: no-http-usage
+    pattern: data "http" $ANYTHING {...}
+    message: HTTP provisioner is not allowed
+    languages:
+      - hcl
+    severity: ERROR
